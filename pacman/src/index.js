@@ -39,7 +39,7 @@ let pCnt = 0;
 let totalP = 0;
 let targetPos;
 let dead = true;
-let lifeCnt = 3;
+let lifeCnt = 1;
 let highScore;
 let score = 0;
 let pillCnt = 0;
@@ -89,7 +89,7 @@ AFRAME.registerComponent('maze', {
     });
   },
   initLife: function () {
-    lifeCnt = 3;
+    lifeCnt = 1;
     renderLife(lifeCnt);
   },
   initSoundControl: function () {
@@ -149,7 +149,7 @@ AFRAME.registerComponent('maze', {
           let animation = document.createElement('a-animation');
           animation.setAttribute("attribute", "material.color");
           animation.setAttribute("from", pColor);
-          animation.setAttribute("to", "white");
+          animation.setAttribute("to", "red");
           animation.setAttribute("dur","500");
           animation.setAttribute("repeat","indefinite");
           sphere.appendChild(animation);
@@ -382,9 +382,9 @@ AFRAME.registerComponent('player', {
   },
   onDie: function () {
     die.play();
-
     this.stop();
-
+    this.onGameOver(false); // Game ends immediately here
+  
     // Rotate replayer
     let player = this.player;
     player.setAttribute('nav-agent', {
@@ -397,14 +397,10 @@ AFRAME.registerComponent('player', {
     animation.setAttribute("easing", "linear");
     animation.setAttribute("repeat","0");
     player.appendChild(animation);
-
+  
     setTimeout(() => {
-      // Restart
-      if(lifeCnt > 0) {
-        player.removeChild(animation);
-        restart(1500);
-      } else 
-        this.onGameOver(false);
+      // Remove rotation animation
+      player.removeChild(animation);
     }, 1000);
   },
   stop: function () {
