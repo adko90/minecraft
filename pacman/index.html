@@ -61,15 +61,15 @@
   
     <!-- Player -->
     <a-entity movement-controls="constrainToNavMesh: true"
-              keyboard-controls="enabled: false"
+              keyboard-controls="enabled: true"
               gamepad-controls="enabled: false"
-              trackpad-controls="enabled: true"
+              trackpad-controls="enabled: false"
               touch-controls="enabled: false"
               position="0 0 4"
               nav-agent="speed: 3.5 ; lookAtTarget: false"
               player>
       <a-camera position="0 1 0"
-                wasd-controls="enabled: false"
+                wasd-controls="enabled: true"
                 look-controls="enabled: false">
         <a-entity> 
           <a-image position="-0.15 0.225 -0.3" 
