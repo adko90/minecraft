@@ -69,7 +69,7 @@
               nav-agent="speed: 1.5; lookAtTarget: true"
               player>
       <a-camera position="0 1 0"
-                wasd-controls="enabled: true"
+                wasd-controls="enabled: false"
                 look-controls="enabled: false">
         <a-entity> 
           <a-image position="-0.15 0.225 -0.3" 
@@ -103,7 +103,7 @@
           </a-entity>
         </a-entity>
       </a-camera>
-      <a-sphere color="dark purple"
+      <a-sphere color="dark green"
                 radius="0.4"
                 position="0 0.5 0.05">
       </a-sphere>
@@ -117,7 +117,7 @@
     </a-entity>
 
     <!-- Ghost -->
-    <a-gltf-model gltf-model="#monkey"
+    <a-gltf-model gltf-model="#ghost"
                  position="0 0 -2.1"
                  nav-agent="speed: 0.30"
                  ghost="0xFF0000">
@@ -159,7 +159,7 @@
              color="purple">
     </a-plane>
 
-    <a-sky color="GREY"></a-sky>
+    <a-sky color="red"></a-sky>
   </a-scene>
 </body>
 </html>
