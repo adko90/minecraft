@@ -22,7 +22,7 @@
 
 <body>
   <div class="logo-container overlay">
-    <img id="logo" src="assets/images/logo.png">
+    <img id="logo" src="assets/images/logo.png" style="transform:rotate(90deg)">
     <button id="start" disabled>
       <i class="fa fa-spinner fa-spin"></i>
     </button>
@@ -66,7 +66,7 @@
               trackpad-controls="enabled: false"
               touch-controls="enabled: false"
               position="0 0 4"
-              nav-agent="speed: 0.7; lookAtTarget: false"
+              nav-agent="speed: 2.5; lookAtTarget: false"
               player>
       <a-camera position="0 1 0"
                 wasd-controls="enabled: false"
@@ -120,19 +120,19 @@
     <a-gltf-model gltf-model="#ghost"
                  position="0 0 -2.1"
                  nav-agent="speed: 0.65"
-                 ghost="0xFF0000">
+                 ghost="0x00FF00">
     </a-gltf-model>
 
     <a-gltf-model gltf-model="#ghost"
                   position="-1 0 -0.5"
                   nav-agent="speed: 9"
-                  ghost="0x00FFDE">
+                  ghost="0x00FF00">
     </a-gltf-model>
 
     <a-gltf-model gltf-model="#ghost"
                   position="0 0 -0.5"
                   nav-agent="speed: 0.65"
-                  ghost="0xFFB8DE">
+                  ghost="0x00FF00">
     </a-gltf-model>
 
     <a-gltf-model gltf-model="#ghost"
