@@ -60,7 +60,7 @@
     </a-assets>
   
     <!-- Player -->
-    <a-entity movement-controls="constrainToNavMesh: false"
+    <a-entity movement-controls="enabled: false"
               keyboard-controls="constrainToNavMesh" true"
               gamepad-controls="enabled: false"
               trackpad-controls="enabled: false"
@@ -69,7 +69,7 @@
               nav-agent="speed: 3.5 ; lookAtTarget: false"
               player>
       <a-camera position="0 1 0"
-                wasd-controls="constrainToNavMesh: true"
+                wasd-controls="enabled: true"
                 look-controls="enabled: false">
         <a-entity> 
           <a-image position="-0.15 0.225 -0.3" 
