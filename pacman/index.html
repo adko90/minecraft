@@ -66,14 +66,14 @@
               trackpad-controls="enabled: false"
               touch-controls="enabled: false"
               position="0 0 4"
-              nav-agent="speed: 1.5; lookAtTarget: false"
+              nav-agent="speed: 1.5; lookAtTarget: true"
               player>
       <a-camera position="0 1 0"
-                wasd-controls="enabled: false"
+                wasd-controls="enabled: true"
                 look-controls="enabled: false">
         <a-entity> 
           <a-image position="-0.15 0.225 -0.3" 
-                   width="0.015"
+                   width="0.5"
                    height="0.015"
                    src="#life"
                    life>
@@ -117,7 +117,7 @@
     </a-entity>
 
     <!-- Ghost -->
-    <a-gltf-model gltf-model="#ghost"
+    <a-gltf-model gltf-model="#monkey"
                  position="0 0 -2.1"
                  nav-agent="speed: 0.30"
                  ghost="0xFF0000">
@@ -154,8 +154,8 @@
     </a-gltf-model>
 
     <a-plane rotation="-90 0 0"
-             width="15"
-             height="16"
+             width="2"
+             height="2"
              color="purple">
     </a-plane>
 
