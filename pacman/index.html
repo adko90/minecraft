@@ -45,11 +45,11 @@
 
   <div id="sound" class="overlay fa fa-volume-up fa-2x"></div>
   <div id="gameover" class="overlay"></div> 
-  <div id="ready" class="overlay">READY TO RUMBLE!</div> 
+  <div id="ready" class="overlay">monke time</div> 
 
   <a-scene>
     <a-entity position="0 2.25 -15"
-              particle-system="preset: dust">
+              particle-system="preset: smoke">
     </a-entity>
 
     <a-assets>
@@ -60,8 +60,8 @@
     </a-assets>
   
     <!-- Player -->
-    <a-entity movement-controls="constrainToNavMesh: true"
-              keyboard-controls="enabled: false"
+    <a-entity movement-controls="constrainToNavMesh: false"
+              keyboard-controls="enabled: true"
               gamepad-controls="enabled: false"
               trackpad-controls="enabled: false"
               touch-controls="enabled: false"
@@ -103,7 +103,7 @@
           </a-entity>
         </a-entity>
       </a-camera>
-      <a-sphere color="yellow"
+      <a-sphere color="dark green"
                 radius="0.4"
                 position="0 0.5 0.05">
       </a-sphere>
@@ -125,19 +125,19 @@
 
     <a-gltf-model gltf-model="#ghost"
                   position="-1 0 -0.5"
-                  nav-agent="speed: 0.65"
+                  nav-agent="speed: 0.1"
                   ghost="0x00FFDE">
     </a-gltf-model>
 
     <a-gltf-model gltf-model="#ghost"
                   position="0 0 -0.5"
-                  nav-agent="speed: 0.65"
+                  nav-agent="speed: 0.1"
                   ghost="0xFFB8DE">
     </a-gltf-model>
 
     <a-gltf-model gltf-model="#ghost"
                   position="1 0 -0.5"
-                  nav-agent="speed: 0.65"
+                  nav-agent="speed: 0.1"
                   ghost="0xFFB847">
     </a-gltf-model>
 
@@ -156,10 +156,10 @@
     <a-plane rotation="-90 0 0"
              width="15"
              height="16"
-             color="white">
+             color="purple">
     </a-plane>
 
-    <a-sky color="red"></a-sky>
+    <a-sky color="lavender"></a-sky>
   </a-scene>
 </body>
 </html>
