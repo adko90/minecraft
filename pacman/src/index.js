@@ -39,7 +39,7 @@ let pCnt = 0;
 let totalP = 0;
 let targetPos;
 let dead = true;
-let lifeCnt = 3;
+let lifeCnt = 5;
 let highScore;
 let score = 0;
 let pillCnt = 0;
@@ -89,7 +89,7 @@ AFRAME.registerComponent('maze', {
     });
   },
   initLife: function () {
-    lifeCnt = 3;
+    lifeCnt = 5;
     renderLife(lifeCnt);
   },
   initSoundControl: function () {
@@ -520,7 +520,7 @@ function enableCamera() {
 function updateLife() {  
   if (lifeCnt > 0) {
     lifeCnt--;
-    renderLife(lifeCnt);
+    renderLife(lifeCnt + 5);
   }
 }
 
