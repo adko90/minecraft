@@ -36,10 +36,10 @@ const ghostScore = 200;
 
 let path = [];
 let pCnt = 0;
-let totalP = 0;
+let totalP = 5;
 let targetPos;
 let dead = true;
-let lifeCnt = 3;
+let lifeCnt = 5;
 let highScore;
 let score = 0;
 let pillCnt = 0;
@@ -89,7 +89,7 @@ AFRAME.registerComponent('maze', {
     });
   },
   initLife: function () {
-    lifeCnt = 3;
+    lifeCnt = 5;
     renderLife(lifeCnt);
   },
   initSoundControl: function () {
@@ -517,11 +517,12 @@ function enableCamera() {
   });
 }
 
-function updateLife() {  
-  if (lifeCnt > 0) {
+function updateLife(isRestart = false) {  
+  // Only decrement life count if it's not a restart scenario
+  if (!isRestart && lifeCnt > 0) {
     lifeCnt--;
-    renderLife(lifeCnt);
   }
+  renderLife(lifeCnt);
 }
 
 function renderLife(cnt) {
@@ -541,7 +542,11 @@ function restart(timeout) {
     document.querySelectorAll('[ghost]')
       .forEach(ghost => updateAgentDest(ghost, ghost.defaultPos));
     dead = false;
-    updateLife();
+    
+    // Call updateLife with the isRestart flag to prevent decrementing lives
+    updateLife(true);  // Passing true indicates this is a restart, so lives should not be reduced
+
     enableCamera();
   }, timeout);    
 }
+
