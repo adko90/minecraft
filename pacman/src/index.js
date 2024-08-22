@@ -6,7 +6,7 @@ require('aframe-particle-system-component');
 import {intersections, maze} from './config.js';
 import {Howl} from 'howler';
 
-const pillDuration = 70;
+const pillDuration = 100;
 const chaseDuration = 80;
 const scatterDuration = 90;
 const flashDuration = 20;
@@ -28,7 +28,7 @@ const pColor = '#FFB897';
 const gColor = 0x2121DE;
 const gNormSpeed = 0.65;
 const gSlowSpeed = 0.2;
-const gFastSpeed = 1.5;
+const gFastSpeed = 3.5;
 const gCollideDist = 0.6;
 const pelletScore = 10;
 const pillScore = 500;
@@ -327,7 +327,7 @@ AFRAME.registerComponent('player', {
 
           // Move to ghost house
           ghost.setAttribute('nav-agent', {
-            active: false,
+            active: true,
             speed: gFastSpeed,
           });
           updateAgentDest(ghost, ghost.defaultPos);
