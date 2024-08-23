@@ -30,8 +30,8 @@ const gNormSpeed = 0.65;
 const gSlowSpeed = 0.2;
 const gFastSpeed = 1.5;
 const gCollideDist = 0.6;
-const pelletScore = 10;
-const pillScore = 50;
+const pelletScore = 1000;
+const pillScore = 500;
 const ghostScore = 200;
 
 let path = [];
